@@ -1,0 +1,253 @@
+/* Styles globaux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #1565c0;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+nav {
+    background-color: #1565c0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #000;
+}
+
+.section {
+    margin-bottom: 50px;
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: #1565c0;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.1rem;
+    padding: 8px;
+}
+
+ul li::before {
+    content: "•";
+    color: #000;
+    margin-right: 10px;
+}
+
+.profil-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    background-color: #1565c0;
+    color: #fff;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+.social-icon {
+    width: 30px;
+    margin: 0 10px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.social-icon:hover {
+    opacity: 1;
+}
+
+/* Grand écran - Styles par défaut */
+@media (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+
+    header h1 {
+        font-size: 3rem; /* Plus grand sur PC */
+    }
+
+    header p {
+        font-size: 2rem; /* Texte d'introduction agrandi */
+    }
+
+    nav ul li a {
+        font-size: 1.3rem; /* Liens plus grands */
+    }
+
+    .section h2 {
+        font-size: 2rem; /* Titres plus grands */
+    }
+
+    .section p {
+        font-size: 1.2rem; /* Texte plus lisible */
+    }
+
+    footer p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Écran moyen - Ajustements pour tablettes */
+@media (max-width: 1024px) {
+    nav ul {
+        flex-wrap: wrap; /* Permet aux liens de se placer en plusieurs lignes */
+    }
+}
+
+/* Petit écran - Version mobile */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Texte plus petit */
+        line-height: 1.8;
+    }
+
+    header {
+        padding: 15px 10px;
+        margin-bottom: 20px;
+    }
+
+    header h1 {
+        font-size: 1.6rem; /* Réduction des titres */
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+        background-color: #ffffff;
+        color: rgb(3, 19, 247);
+        border-radius: 5px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        background-color: #000;
+        color: #184e8b;
+        transform: scale(1.05);
+    }
+
+    .section {
+        padding: 10px;
+        margin-bottom: 15px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .section h2 {
+        font-size: 1.3rem; /* Titres réduits */
+    }
+
+    .section p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+
+    .profil-image {
+        width: 100px;
+        height: 100px;
+        margin: 15px auto;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    footer p {
+        font-size: 0.9rem; /* Pied de page réduit */
+    }
+
+    .social-icon {
+        width: 20px;
+        margin: 0 6px;
+    }
+}
